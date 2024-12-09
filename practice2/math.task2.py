@@ -1,11 +1,9 @@
+import math
+
 def sum_of_harmonic(a):
     if a<=0:
         raise ValueError('Number has to be >0.')
-
-    harmonic_sum = 0.0
-    for i in range(1, a+1):
-        harmonic_sum+=1/i
-    return harmonic_sum
+    return math.fsum(1/i for i in range(1, a+1))
 
 
 user_a = float(input('Enter harmonic range amount of units: '))
